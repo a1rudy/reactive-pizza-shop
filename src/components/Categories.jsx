@@ -3,7 +3,7 @@ import React from 'react';
 function Categories({ items, onClick }) {
   const [activeItem, setActiveItem] = React.useState(null)
 
-  function handleActiveItem(index) {
+  const handleActiveItem = (index) => {
     setActiveItem(index)
   }
 
