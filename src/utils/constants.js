@@ -4,5 +4,7 @@ const sortItems = [
   { name: 'цене', type: 'price', order: 'asc' },
   { name: 'алфавит', type: 'name', order: 'asc' },
 ];
+const availableTypes = ['тонкое', 'традиционное'];
+const availableSizes = [26, 30, 40];
 
-export { categoriesNames, sortItems };
+export { categoriesNames, sortItems, availableTypes, availableSizes };

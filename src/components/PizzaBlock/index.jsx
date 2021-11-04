@@ -1,27 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { PizzaLoadingBlock } from '..';
+import { Button } from '..';
+import { availableTypes, availableSizes } from '../../utils/constants';
 
-
-function PizzaBlock({ name, imageUrl, price, types, sizes, isLoading }) {
-  const availableTypes = ['тонкое', 'традиционное'];
-  const availableSizes = [26, 30, 40];
-
+function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, addedCount }) {
   const [activeType, setActiveType] = React.useState(types[0]);
-  const [activeSize, setActiveSize] = React.useState(sizes[0]);
+  const [activeSize, setActiveSize] = React.useState(0);
 
-  const handleActiveType = (index) => {
+  const onSelectType = (index) => {
     setActiveType(index);
   };
 
-  const handleActiveSize = (index) => {
+  const onSelectSize = (index) => {
     setActiveSize(index);
   };
 
-  if(!isLoading) {
-    return <PizzaLoadingBlock />
-  }
+  const onAddPizza = () => {
+    const obj = {
+      id,
+      name,
+      imageUrl,
+      price,
+      size: availableSizes[activeSize],
+      type: availableTypes[activeType],
+    };
+    onClickAddPizza(obj);
+  };
 
   return (
     <div className="pizza-block">
@@ -32,7 +37,7 @@ function PizzaBlock({ name, imageUrl, price, types, sizes, isLoading }) {
           {availableTypes.map((type, index) => (
             <li
               key={type}
-              onClick={() => handleActiveType(index)}
+              onClick={() => onSelectType(index)}
               className={classNames({
                 active: activeType === index,
                 disabled: !types.includes(index),
@@ -45,7 +50,7 @@ function PizzaBlock({ name, imageUrl, price, types, sizes, isLoading }) {
           {availableSizes.map((size, index) => (
             <li
               key={size}
-              onClick={() => handleActiveSize(index)}
+              onClick={() => onSelectSize(index)}
               className={classNames({
                 active: activeSize === index,
                 disabled: !sizes.includes(size),
@@ -57,7 +62,7 @@ function PizzaBlock({ name, imageUrl, price, types, sizes, isLoading }) {
       </div>
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">от {price} ₽</div>
-        <div className="button button--outline button--add">
+        <Button onClick={onAddPizza} className="button--add" outline>
           <svg
             width="12"
             height="12"
@@ -70,8 +75,8 @@ function PizzaBlock({ name, imageUrl, price, types, sizes, isLoading }) {
             />
           </svg>
           <span>Добавить</span>
-          <i>2</i>
-        </div>
+          {addedCount && <i>{addedCount}</i>}
+        </Button>
       </div>
     </div>
   );
@@ -83,7 +88,7 @@ PizzaBlock.propTypes = {
   price: PropTypes.number,
   types: PropTypes.arrayOf(PropTypes.number),
   sizes: PropTypes.arrayOf(PropTypes.number),
-  onClickAddPizza: PropTypes.func,
+  onAddPizza: PropTypes.func,
   addedCount: PropTypes.number,
 };
 
