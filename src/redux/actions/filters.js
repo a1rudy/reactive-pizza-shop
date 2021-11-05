@@ -1,9 +1,11 @@
+import { varSetSortBy, varSetCategory } from '../../utils/constants';
+
 export const setSortBy = ({ type, order }) => ({
-  type: 'SET_SORT_BY',
+  type: varSetSortBy,
   payload: { type, order },
 });
 
 export const setCategory = (catIndex) => ({
-  type: 'SET_CATEGORY',
+  type: varSetCategory,
   payload: catIndex,
 });

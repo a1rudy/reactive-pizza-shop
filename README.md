@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Интернет магазин по заказу пиццы: "REACTIVE PIZZA SHOP" на React + Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ссылка на проект: [https://reactive-pizza-shop.herokuapp.com/](https://reactive-pizza-shop.herokuapp.com/)
 
-## Available Scripts
+------
 
-In the project directory, you can run:
+## Описание проекта
 
-### `npm start`
+Проект представляет собой небольшой аналог магазина по заказу пиццы. На сайте вы можете сортировать пиццу по категориям, популярности, цене и альфавиту. Выбранная пицца добавляется в корзину, где отображдаться полная информацию о заказе: вид пиццы, количество, цена по типу и итоговая цена к оплате. Вы можете отрегулировать количество или удалить любой вид пиццы, либо очистить всю корзину.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+------
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Стек
+* React.js + хуки
+* React Router
+* Redux
+* Redux thunk
+* json-server
+* Axios
+* classnames
 
-### `npm test`
+------
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Пользовательский интерфейс:
+1. Сортировка пицц по категориям.
+2. Сортировка пицц по популярности, цене и алфавиту.
+3. Выбор пиццы для добавление в корзину по размеру и типу тонкого, традиционного теста.
+4. Добавление пиццы в корзину.
+4. Уменьшение количества добавленных видов пицц в корзине.
+6. Удаление вида пиццы из корзины.
+7. Очистка корзины.
+8. UX функции: 
+    * отображение прелоудера при загрузке пицц;
+    * отображение количества добавленных типов пицц в кнопке "добавить";
+    * отображение количества добавленных типов пицц и общей суммы заказа на кнопке "Корзина";
+    * затемнение и уменьшение прозрачности активных кнопок и элементов;
 
-### `npm run build`
+------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Инструкция по развертыванию проекта локально через [Git BASH](https://gitforwindows.org/) (терминал):
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Скачайте и установите [Node.js с официального сайта](https://nodejs.org/en/download/) (по необходимости).
+2. Клонируйте репозиторий в корневую папку командой:
+   `git clone https://github.com/a1rudy/reactive-pizza-shop.git`
+3. Установите node_modules командой:
+   `npm install`
+4. Запуститите сервер командой:
+   `npm run start`  
+   Запуск сервера с hot-reload:
+   `npm run dev`

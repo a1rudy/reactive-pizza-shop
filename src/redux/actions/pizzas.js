@@ -1,21 +1,22 @@
 import axios from 'axios';
+import { varSetLoaded, varSetPizzas } from '../../utils/constants';
 
 export const setLoaded = (payload) => ({
-  type: 'SET_LOADED',
+  type: varSetLoaded,
   payload,
 });
 
 export const fetchPizzas = (sortBy, category) => (dispatch) => {
   dispatch({
-    type: 'SET_LOADED',
+    type: varSetLoaded,
     payload: false,
   });
 
   axios
     .get(
-      ` http://localhost:3001/pizzas?${category !== null ? `category=${category}` : ''}&_sort=${
-        sortBy.type
-      }&_order=${sortBy.order}`,
+      ` /pizzas?${category !== null ? `category=${category}` : ''}&_sort=${sortBy.type}&_order=${
+        sortBy.order
+      }`,
     )
     .then(({ data }) => {
       dispatch(setPizzas(data));
@@ -23,6 +24,6 @@ export const fetchPizzas = (sortBy, category) => (dispatch) => {
 };
 
 export const setPizzas = (items) => ({
-  type: 'SET_PIZZAS',
+  type: varSetPizzas,
   payload: items,
 });

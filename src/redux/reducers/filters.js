@@ -1,3 +1,5 @@
+import { varSetSortBy, varSetCategory } from '../../utils/constants';
+
 const initialState = {
   category: null,
   sortBy: {
@@ -8,13 +10,13 @@ const initialState = {
 
 const filters = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_SORT_BY':
+    case varSetSortBy:
       return {
         ...state,
         sortBy: action.payload,
       };
 
-    case 'SET_CATEGORY':
+    case varSetCategory:
       return {
         ...state,
         category: action.payload,

@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSortBy, setCategory } from '../redux/actions/filters';
 import { Categories, SortPopup, PizzaBlock, PizzaLoadingBlock } from '../components';
 import { categoriesNames, sortItems } from '../utils/constants';
+import { setSortBy, setCategory } from '../redux/actions/filters';
 import { fetchPizzas } from '../redux/actions/pizzas';
 import { addPizzaToCart } from '../redux/actions/cart';
 
@@ -51,7 +51,7 @@ function Home() {
               <PizzaBlock
                 onClickAddPizza={handleAddPizzaToCart}
                 key={obj.id}
-                addedCount={cartItems[obj.id] && cartItems[obj.id].length}
+                addedCount={cartItems[obj.id] && cartItems[obj.id].items.length}
                 {...obj}
               />
             ))
