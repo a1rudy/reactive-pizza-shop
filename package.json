@@ -25,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "json-server": "json-server --watch public/db.json --port=3001"
+    "json-server": "json-server --watch public/db.json --port=3001",
+    "ssas": "sass --watch src/scss/index.scss:src/scss/styles/styles.css"
   },
   "eslintConfig": {
     "extends": [

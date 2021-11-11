@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Categories = React.memo(function Categories({ activeCategory, items, onClickCategory }) {
   return (
     <div className="categories">
-      <ul>
+      <ul className="categories__cells">
         <li
-          className={activeCategory === null ? 'active' : ''}
+          className={classNames('categories__cell', { categories__cell_active: activeCategory === null })}
           onClick={() => onClickCategory(null)}>
           Все
         </li>
         {items.map((name, index) => (
           <li
-            className={activeCategory === index ? 'active' : ''}
+            className={classNames('categories__cell', { categories__cell_active: activeCategory === index })}
             onClick={() => onClickCategory(index)}
             key={`${name}_${index}`}>
             {name}

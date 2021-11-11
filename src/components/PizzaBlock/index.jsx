@@ -33,27 +33,27 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
       <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
       <h4 className="pizza-block__title">{name}</h4>
       <div className="pizza-block__selector">
-        <ul>
+        <ul className="pizza-block__type-list">
           {availableTypes.map((type, index) => (
             <li
               key={type}
               onClick={() => onSelectType(index)}
-              className={classNames({
-                active: activeType === index,
-                disabled: !types.includes(index),
+              className={classNames('pizza-block__type', {
+                'pizza-block__type_active': activeType === index,
+                'pizza-block__type_disabled': !types.includes(index),
               })}>
               {type}
             </li>
           ))}
         </ul>
-        <ul>
+        <ul className="pizza-block__type-list">
           {availableSizes.map((size, index) => (
             <li
               key={size}
               onClick={() => onSelectSize(index)}
-              className={classNames({
-                active: activeSize === index,
-                disabled: !sizes.includes(size),
+              className={classNames('pizza-block__type', {
+                'pizza-block__type_active': activeSize === index,
+                'pizza-block__type_disabled': !sizes.includes(size),
               })}>
               {size} см.
             </li>
@@ -62,7 +62,7 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
       </div>
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">от {price} ₽</div>
-        <Button onClick={onAddPizza} className="button--add" outline>
+        <Button onClick={onAddPizza} className="button-add" outline>
           <svg
             width="12"
             height="12"
@@ -74,7 +74,7 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
               fill="white"
             />
           </svg>
-          <span>Добавить</span>
+          <span className="button-add__span">Добавить</span>
           {addedCount && <i>{addedCount}</i>}
         </Button>
       </div>

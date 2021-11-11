@@ -1,32 +1,29 @@
-@import '../variables';
-
 .header {
   border-bottom: 1px solid $gray-line;
   padding: 40px 0;
 
-  .container {
+  &__logo-wrap {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   &__logo {
-    display: flex;
+    margin-right: 15px;
+    width: 38px;
+  }
 
-    img {
-      margin-right: 15px;
-    }
+  &__title {
+    @include font(24px, 800);
+    color: #181818;
+    letter-spacing: 1%;
+    text-transform: uppercase;
+  }
 
-    h1 {
-      color: #181818;
-      font-size: 24px;
-      letter-spacing: 1%;
-      text-transform: uppercase;
-      font-weight: 800;
-    }
+  &__subtitle {
+    color: #7b7b7b;
+  }
 
-    p {
-      color: #7b7b7b;
-    }
+  &__cart-icon {
+    margin-right: 8px;
+    margin-bottom: 1px;
   }
 }
