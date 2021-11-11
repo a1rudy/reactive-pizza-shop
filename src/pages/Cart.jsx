@@ -116,7 +116,9 @@ function Cart() {
             <br />
             Для того, чтобы заказать пиццу, перейди на главную страницу.
           </p>
+          {/* <div className='cart-empty__image-wrap'> */}
           <img className="cart-empty__image" src={cartEmptyImage} alt="empty cart" />
+          {/* </div> */}
           <Link to="/" className="button button-black">
             <span>Вернуться назад</span>
           </Link>

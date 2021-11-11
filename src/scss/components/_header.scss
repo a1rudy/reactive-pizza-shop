@@ -22,6 +22,12 @@
     color: #7b7b7b;
   }
 
+  @media (max-width: $tablet) {
+    &__cart {
+      margin-top: 30px;
+    }
+  }
+
   &__cart-icon {
     margin-right: 8px;
     margin-bottom: 1px;
