@@ -15,6 +15,7 @@
 * React Router
 * Redux
 * Redux thunk
+* Ssas preprocessor
 * json-server
 * Axios
 * classnames

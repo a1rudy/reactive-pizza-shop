@@ -1,4 +1,4 @@
-export const categoriesNames = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Комбо'];
+export const categoriesNames = ['Мясные', 'Вегетарианские', 'Гриль', 'Острые', 'Комбо'];
 export const sortItems = [
   { name: 'популярности', type: 'popular', order: 'desc' },
   { name: 'цене', type: 'price', order: 'asc' },

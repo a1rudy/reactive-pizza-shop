@@ -169,7 +169,7 @@
     @media (max-width: $tablet) {
       order: 4;
       width: 130px;
-      margin: 10px 0;
+      margin: 10px;
 
       .button {
         width: 40px;
@@ -200,10 +200,11 @@
     letter-spacing: 0.01em;
 
     @media (max-width: $tablet) {
+      width: 33%;
       order: 3;
       align-items: flex-start;
       justify-content: flex-start;
-      margin: 10px 0;
+      margin: 10px;
       @include font(24px, bold);
     }
   }
@@ -270,6 +271,7 @@
 
     @media (max-width: $mobile) {
       flex-direction: column;
+      margin: 10px;
     }
   }
 

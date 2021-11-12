@@ -31,6 +31,11 @@
   border-bottom: 1px solid #f6f6f6;
   padding: 40px 0;
 }
+@media (max-width: 760px) {
+  .header {
+    padding: 30px 10px;
+  }
+}
 .header__logo-wrap {
   display: flex;
 }
@@ -566,7 +571,7 @@
   .cart__item-count {
     order: 4;
     width: 130px;
-    margin: 10px 0;
+    margin: 10px;
   }
   .cart__item-count .button {
     width: 40px;
@@ -601,10 +606,11 @@
 }
 @media (max-width: 760px) {
   .cart__item-price {
+    width: 33%;
     order: 3;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 10px 0;
+    margin: 10px;
     font-family: "Proxima Nova", Tahoma, sans-serif;
     font-size: 24px;
     font-weight: bold;
@@ -671,6 +677,7 @@
 @media (max-width: 500px) {
   .cart__bottom-details {
     flex-direction: column;
+    margin: 10px;
   }
 }
 .cart__bottom-details-text {
