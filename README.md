@@ -1,7 +1,5 @@
 # Интернет магазин по заказу пиццы: "REACTIVE PIZZA SHOP" на React + Redux
 
-Ссылка на проект: [https://reactive-pizza-shop.herokuapp.com/](https://reactive-pizza-shop.herokuapp.com/)
-
 ------
 
 ## Описание проекта
